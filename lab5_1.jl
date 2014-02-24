@@ -31,7 +31,8 @@ function matrix_mul_1c(A::Array,x::Array)
     return result;
 end
 
-A = rand(4,2);
-b = rand(2);
+A = rand(8,8);
+b = rand(8);
 println("1a_result: ", "\n", matrix_mul_1a(A,b), "\n", "1b_result: ", "\n",matrix_mul_1b(A,b),"1c_result: ", "\n", matrix_mul_1c(A,b));
+println("1a_time: ", @elapsed(matrix_mul_1a(A,b)), "\n", "1b_time: ", @elapsed(matrix_mul_1b(A,b)), "\n", "1c_time: ", @elapsed(matrix_mul_1c(A,b)));
 
